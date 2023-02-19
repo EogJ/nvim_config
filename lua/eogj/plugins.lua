@@ -2,6 +2,9 @@ vim.cmd [[packadd packer.nvim]]
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 vim.cmd([[ let g:nvim_tree_auto_open = 1 ]])
 vim.cmd([[ let g:nvim_tree_disable_netrw = 1 ]])
+vim.cmd([[ let g:NERDTreeMinimalMenu = 1 ]])
+
+
 
 return require('packer').startup(function()
     use("wbthomason/packer.nvim")
@@ -38,6 +41,10 @@ return require('packer').startup(function()
         }
     }
 
+    -- Markwodn
+    use('godlygeek/tabular')
+    use('preservim/vim-markdown')
+
     -- -- Primeagen doesn"t create lodash
     use("ThePrimeagen/git-worktree.nvim")
     use("ThePrimeagen/harpoon")
@@ -47,6 +54,7 @@ return require('packer').startup(function()
     -- Colorscheme section
     use("gruvbox-community/gruvbox")
     use("folke/tokyonight.nvim")
+    use('navarasu/onedark.nvim')
 
     use("nvim-treesitter/playground")
     use("romgrk/nvim-treesitter-context")
@@ -65,6 +73,7 @@ return require('packer').startup(function()
     use("tpope/vim-rails")
     use("kassio/neoterm")
     use("github/copilot.vim")
+    use("mhinz/vim-mix-format")
 
     use("rust-lang/rust.vim")
     use {

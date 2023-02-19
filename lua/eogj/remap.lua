@@ -9,6 +9,12 @@ nnoremap("<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 nnoremap("H", "^")
 nnoremap("L", "$")
 
+-- Harpoon
+-- harpoon catch
+nnoremap("<leader>hc", "<cmd>lua require('harpoon.mark').add_file()<cr>")
+-- harpoon view
+nnoremap("<leader>hv", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>")
+
 -- Move by line
 nnoremap("j", "gj")
 nnoremap("k", "gk")

@@ -224,6 +224,11 @@ _G.packer_plugins = {
     path = "/Users/eoghain/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
   },
+  tabular = {
+    loaded = true,
+    path = "/Users/eoghain/.local/share/nvim/site/pack/packer/start/tabular",
+    url = "https://github.com/godlygeek/tabular"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/eoghain/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -254,6 +259,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eoghain/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
+  },
+  ["vim-markdown"] = {
+    loaded = true,
+    path = "/Users/eoghain/.local/share/nvim/site/pack/packer/start/vim-markdown",
+    url = "https://github.com/preservim/vim-markdown"
+  },
+  ["vim-mix-format"] = {
+    loaded = true,
+    path = "/Users/eoghain/.local/share/nvim/site/pack/packer/start/vim-mix-format",
+    url = "https://github.com/mhinz/vim-mix-format"
   },
   ["vim-rails"] = {
     loaded = true,

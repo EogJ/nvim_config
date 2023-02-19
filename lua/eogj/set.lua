@@ -45,3 +45,5 @@ vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 vim.g.mapleader = " "
+
+vim.cmd([[ let g:mix_format_on_save = 1 ]])
