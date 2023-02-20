@@ -47,3 +47,12 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true,
 vim.g.mapleader = " "
 
 vim.cmd([[ let g:mix_format_on_save = 1 ]])
+vim.g.NERDTreeMinimalMenu = 1
+
+vim.cmd([[
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
+augroup END
+]])
+

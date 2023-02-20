@@ -2,6 +2,7 @@ local nnoremap = require("eogj.keymap").nnoremap
 
 nnoremap("<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 nnoremap("<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
+nnoremap("<leader>fs", "<cmd>lua require('telescope.builtin').grep_string()<cr>")
 nnoremap("<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 nnoremap("<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 
@@ -43,7 +44,7 @@ nnoremap("<leader>cc", "<cmd>:Tclose<cr>")
 nnoremap("<leader>nt", "<cmd>:NERDTree<cr>")
 
 -- Notes
-nnoremap("<leader>nn", "<cmd>:sp ~/notes/programming_notes.md<cr>")
+nnoremap("<leader>pn", "<cmd>:sp ~/notes/project_notes.md<cr>")
 
 -- TimeLog
 nnoremap("<leader>tl", "<cmd>:sp ~/notes/time_log/" .. os.date("%d") .. "-" .. os.date("%m") .. "-" .. os.date("%Y") .. ".md<cr>")
@@ -107,3 +108,10 @@ vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
   {silent = true, noremap = true}
 )
 
+vim.diagnostic.config({
+  virtual_text = false
+})
+
+-- Show line diagnostics automatically in hover window
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
