@@ -14,9 +14,11 @@ return require('packer').startup(function()
     })
 
     -- TJ created lodash of neovim
-    use("nvim-lua/plenary.nvim")
     use("nvim-lua/popup.nvim")
-    use("nvim-telescope/telescope.nvim")
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
     -- The Basics
     use {
@@ -76,18 +78,19 @@ return require('packer').startup(function()
     use("mhinz/vim-mix-format")
 
     use("rust-lang/rust.vim")
-    use {
-  "folke/trouble.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
-        auto_open = "true"
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
-}
+    -- use {
+    --     "folke/trouble.nvim",
+    --     requires = "kyazdani42/nvim-web-devicons",
+    --     config = function()
+    --         require("trouble").opts {
+    --             auto_open = "false",
+    --             auto_preview = "false"
+    --             -- your configuration comes here
+    --             -- or leave it empty to use the default settings
+    --             -- refer to the configuration section below
+    --         }
+    --     end
+    -- }
 end)
 
 
